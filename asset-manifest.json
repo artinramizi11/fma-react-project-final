@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fma-react-project-final/static/css/main.918b1269.css",
+    "main.js": "/fma-react-project-final/static/js/main.f6f4c5d4.js",
+    "index.html": "/fma-react-project-final/index.html",
+    "main.918b1269.css.map": "/fma-react-project-final/static/css/main.918b1269.css.map",
+    "main.f6f4c5d4.js.map": "/fma-react-project-final/static/js/main.f6f4c5d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.918b1269.css",
+    "static/js/main.f6f4c5d4.js"
+  ]
+}
