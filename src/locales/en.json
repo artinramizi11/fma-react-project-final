@@ -1,0 +1,18 @@
+{
+    "loginFormTitle": "You need to login first",
+    "footer": "All rights reserved by Artin Ramizi",
+    "home-nav-text": "Home",
+    "home-login-text": "Log in",
+    "home-cart-text": "Cart Items",
+    "home-logout-text": "Log out",
+    "fields-required": "both fields are required",
+    "username-placeholder": "username",
+    "password-placeholder": "password",
+    "submit-btn": "Submit",
+    "visit-product-text": "Visit this product",
+    "add-product-to-cart": "Add to cart",
+    "added-product-text": "Added to cart"
+
+
+  }
+  
