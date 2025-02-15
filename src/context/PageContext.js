@@ -3,7 +3,10 @@ import { createContext, useContext, useState } from "react";
 const PageContext = createContext()
 
 const PageContextProvider = ({children}) => {
-    const [logged,setLogged] = useState(false)
+    const [logged,setLogged] = useState(() => {
+        const loggedStoredUser = localStorage.getItem("logged")
+       return loggedStoredUser ? JSON.parse(loggedStoredUser) : false
+    })
     const [cartItems,setCartItems] = useState(() => {
         const storedCart = localStorage.getItem("cartItems")
         return storedCart ? JSON.parse(storedCart): []

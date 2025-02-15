@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { usePageContext } from '../context/PageContext'
 import { useTranslation } from 'react-i18next'
@@ -21,8 +21,13 @@ const Product = ({product}) => {
     }
 }
 
+useEffect(() => {
+  localStorage.setItem("cartItems", JSON.stringify(cartItems))
+
+},[cartItems])
+
 return (
-    <div className='flex items-center gap-3' >
+    <div className='flex items-center gap-2' >
        {product &&
        <>
        <img src={`api/images/${product.imageUrl}`} className='w-[200px] h-[200px]' />

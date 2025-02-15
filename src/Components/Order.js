@@ -23,22 +23,21 @@ const Order = () => {
 
 
   return (
+    <div className="flex items-center justify-center bg-slate-100 p-6 h-screen">
+  {ordered ? 
     <div>
-        {ordered &&
-        <div className='h-[500px] bg-gray-200 flex items-center justify-center flex-col'>
-            <h1 className='text-2xl'>Thanks for trusting us!</h1>
-            <p>Price of purchased items: <span className='underline'>{totalPrice}</span>$ </p>
-            <p className='underline'>Check your email for more information</p>
-            <Link replace  to='/' className='underline cursor-pointer'>Back to home</Link>
-        </div>
-        }
-        {!ordered &&
-        <div className='bg-gray-200 h-[500px] flex items-center justify-center flex-col'>
-            <h1 className='text-2xl'>No Access To This Link</h1>
-            <Link to='/' className='underline'>Back to home</Link>
-        </div>
-        }
+      <h1>Thank you for your purchase!</h1>
+      <p>
+        Total Price of all items: <span className="text-green-600 font-semibold">${totalPrice}</span>
+      </p>
     </div>
+   : 
+    <div>
+    <p>You dont have access to this link!</p>
+    </div>
+  }
+</div>
+
   )
 }
 

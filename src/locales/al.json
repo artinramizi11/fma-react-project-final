@@ -11,7 +11,9 @@
     "submit-btn": "Kerko",
     "visit-product-text": "Vizitoje kete product",
     "add-product-to-cart": "Shtoje ne shport",
-    "added-product-text": "Egziston ne shport"
+    "added-product-text": "Egziston ne shport",
+    "no-products-in-cart":"Asnje produkt nuk egziston ne shport",
+    "go-to-products": "Shko te produktet"
 
 
 

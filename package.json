@@ -5,6 +5,7 @@
   "homepage": "https://artinramizi11.github.io/fma-react-project-final",
   "dependencies": {
     "cra-template": "1.2.0",
+    "gh-pages": "^6.3.0",
     "i18next-browser-languagedetector": "^8.0.3",
     "i18next-http-backend": "^3.0.2",
     "i18next-scanner": "^4.6.0",

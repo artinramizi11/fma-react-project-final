@@ -11,7 +11,9 @@
     "submit-btn": "Submit",
     "visit-product-text": "Visit this product",
     "add-product-to-cart": "Add to cart",
-    "added-product-text": "Added to cart"
+    "added-product-text": "Added to cart",
+    "no-products-in-cart":"No products in cart",
+    "go-to-products": "Go to product"
 
 
   }

@@ -28,24 +28,49 @@ const ProductsPage = () => {
 
     },[pageNumber])
 
-    console.log(currentPage)
 
+    return (
+      <>
+        <Categories />
+  
+    
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 bg-gray-100 rounded-lg shadow-md">
+          {paginationProducts?.map((product) => (
+            <div key={product.id} className="bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <Product product={product} />
+            </div>
+          ))}
+    
+        
 
-  return (
-   <>
-   <Categories />
-   {categoryName ? <p>You selected {categoryName} Category</p> : null}
-    <div className='grid grid-cols-4 h-[600px] bg-gray-200 p-8'>
-        {paginationProducts?.map((product) => <Product key={product.id} product={product} />)}
-        {paginationProducts.length === 0 && <h1>No Product Available With <span className=' p- underline'>{search}</span> On <span className='underline'>{currentPage}</span> Page</h1>}
-    </div>
-    <div className='flex justify-center gap-3'>
-      {Array.from({length: totalPages}).map((_,index) => <Link onClick={() => setCurrentPage(index + 1)} 
-      className={`p-4 m-3 font-bold text-2xl text-white border rounded-[50%] text-center ${index + 1 === currentPage ? "bg-gray-800" : "bg-gray-400"}`} 
-      to={`/page/${index + 1}`}>{index + 1}</Link>)}
-    </div>
-   </>
-  )
+        </div>
+
+        {paginationProducts.length === 0 && (
+            <p 
+            className='text-center w-full h-[300px] flex items-center justify-center bg-gray-200'>
+              No Products Found For <span className='underline p-2'>{search}</span><span>value</span> on {currentPage} page
+              </p>
+          )}
+    
+        <div className="flex justify-center items-center gap-3 m-8">
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <Link 
+              key={index}
+              onClick={() => setCurrentPage(index + 1)}
+              className={`w-12 h-12 flex items-center justify-center font-bold text-lg border rounded-full transition-all duration-300
+                ${index + 1 === currentPage 
+                  ? "bg-slate-600 text-white shadow-xl scale-110" 
+                  : "bg-gray-300 text-gray-800 hover:bg-slate-600 hover:text-white hover:scale-105"}
+              `}
+              to={`/page/${index + 1}`}
+            >
+              {index + 1}
+            </Link>
+          ))}
+        </div>
+      </>
+    );
+    
 }
 
 export default ProductsPage;
