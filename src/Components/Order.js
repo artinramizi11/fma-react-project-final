@@ -3,18 +3,20 @@ import { usePageContext } from '../context/PageContext'
 import { Link } from 'react-router-dom'
 
 const Order = () => {
-    const {ordered,setOrdered,cartItems,setCartItems} = usePageContext()
-
+    const {ordered,setOrdered,cartItems,setCartItems,orders,setOrders} = usePageContext()
     const [totalPrice,setTotalPrice] = useState(0)
+
+    console.log(orders)
 
     useEffect(() => {
         if(ordered && cartItems.length > 0){
             const price = Math.ceil(cartItems.reduce((acc, pr) => acc + pr.price, 0));
             setTotalPrice(price)
+            setOrders([...orders, cartItems])
             setCartItems([])
         } else return;
 
-    },[ordered,cartItems])
+    },[ordered,cartItems,orders,cartItems,setCartItems])
 
     useEffect(() => {
         localStorage.setItem("cartItems", JSON.stringify(cartItems))

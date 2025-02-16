@@ -21,7 +21,7 @@ const CartItemPage = () => {
 
     useEffect(() => {
       localStorage.setItem("cartItems", JSON.stringify(cartItems))
-    },[setCartItems])
+    },[cartItems])
 
     function checkOutBtn(){
       setOrdered(true)

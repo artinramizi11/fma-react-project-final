@@ -4,13 +4,14 @@ import { usePageContext } from '../context/PageContext';
 
 const Categories = ({ param }) => {
   const [categories, setCategories] = useState([]);
-  const { setSelectedCategory, setSearch, search } = usePageContext();
+  const { setSelectedCategory, setSearch, search,price,setPrice } = usePageContext();
   const navigate = useNavigate();
 
   useEffect(() => {
     fetch('api/categories.json')
-      .then((res) => res.json())
-      .then((data) => setCategories(data));
+    .then((res) => res.json())
+    .then((data) => setCategories(data));
+
   }, []);
 
   function allProductsText() {
@@ -20,8 +21,10 @@ const Categories = ({ param }) => {
 
   return (
     <div className="flex  flex-col p-2">
-      <div className="flex items-center gap-3 border-b border-gray-300 pb-3">
-        <p className="text-gray-700 font-medium">Search:</p>
+      
+      <div className="flex items-center justify-between p-3 gap-3 border-b border-gray-300 pb-3">
+       <div className='flex gap-2 items-center'>
+       <p className="text-gray-700 font-medium">Search:</p>
         <input
           type="text"
           placeholder="Search products..."
@@ -29,6 +32,16 @@ const Categories = ({ param }) => {
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
+       </div>
+       <div className="flex items-center gap-3">
+  <input
+    type="number"
+    placeholder="Enter Price"
+    className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 "
+    onChange={(e) => setPrice(e.target.value)} value={price}
+  />
+</div>
+
       </div>
 
       <div className="mt-4">

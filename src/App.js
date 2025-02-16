@@ -11,6 +11,7 @@ import CartItemPage from './Pages/CartItemPage'
 import ProductsPage from './Pages/ProductsPage'
 import PageNotFound from './Components/PageNotFound'
 import Order from './Components/Order'
+import OrdersPage from './Pages/OrdersPage'
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
         <Route path='/category/:categoryName' element={<ProductsByCategory />} />
         <Route path='/cartitems' element={<CartItemPage />} />
         <Route path='/order/:id' element={<Order />} />
+        <Route path='/orders' element={<OrdersPage />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
       

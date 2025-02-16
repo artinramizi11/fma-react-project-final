@@ -3,7 +3,7 @@
     "footer": "Te gjitha te drejtat e rezervuara nga Artin Ramizi",
     "home-nav-text": "Kryefaqja",
     "home-login-text": "Kyqu",
-    "home-cart-text": "Artikujt",
+    "home-cart-text": "Shporta",
     "home-logout-text": "Dilni",
     "fields-required": "Të dyja fushat janë të detyrueshme",
     "username-placeholder": "Perdoruesi",
@@ -13,7 +13,16 @@
     "add-product-to-cart": "Shtoje ne shport",
     "added-product-text": "Egziston ne shport",
     "no-products-in-cart":"Asnje produkt nuk egziston ne shport",
-    "go-to-products": "Shko te produktet"
+    "go-to-products": "Shko te produktet",
+    "order-history": "Porositë",
+    "product-status": "Në pritje",
+    "status": "Gjendja",
+    "total-price": "Totali",
+    "product-quantity": "Sasia e produkteve"
+
+
+
+
 
 
 

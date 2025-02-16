@@ -8,7 +8,7 @@ const ProductsByCategory = () => {
 
     const {categoryName} = useParams()
 
-    const {categories,products,search,selectedCategory} = usePageContext()
+    const {categories,products,search,selectedCategory,price} = usePageContext()
 
 
     const filteredProductsByCategory = useMemo(() => {
@@ -16,11 +16,12 @@ const ProductsByCategory = () => {
         const allproductsbycategory = products?.filter((product) => {
             const productsBySearch = search ? product.name.toLowerCase().includes(search.toLowerCase()) : true;
             const productsByCategory = selectedCategory ? product.categoryId === selectedCategory?.id : true;
-            return productsBySearch && productsByCategory
+            const productsByPrice = price ? product.price >= price : true;
+            return productsBySearch && productsByCategory && productsByPrice
         })
         return allproductsbycategory
 
-    },[categoryName,categories,products,search])
+    },[categoryName,categories,products,search,price])
 
 
   return (
@@ -28,7 +29,7 @@ const ProductsByCategory = () => {
     <Categories param={categoryName} />
     {filteredProductsByCategory.length === 0 && <p 
     className='text-center w-full h-[300px] flex items-center justify-center bg-gray-200'>
-      No Products Found For <span className='underline p-2'>{selectedCategory}</span> category With <span className='underline p-2'>{search}</span><span>value</span>
+      No Products Found For <span className='underline p-2'>{selectedCategory}</span> category With <span className='underline m-2'>{search}</span><span className='m-2'>{search === "" ? "Empty Search" : ""}</span>{price && `and with ${price}$ price`}
       </p>}
     <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8 bg-gray-100 rounded-lg shadow-md'>
     {filteredProductsByCategory?.map((product) => {

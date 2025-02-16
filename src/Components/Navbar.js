@@ -43,6 +43,7 @@ const Navbar = () => {
         <Link to="/" className="hover:text-gray-300 transition" onClick={() => setLogged(false)}>
           {logged ? t('home-logout-text') : t('home-login-text')}
         </Link>
+        {logged && <Link to='/orders'>{t("order-history")}</Link>}
       </div>
 
       <div className="flex items-center gap-3">

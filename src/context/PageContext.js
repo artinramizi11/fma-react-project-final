@@ -16,6 +16,11 @@ const PageContextProvider = ({children}) => {
     const [products,setProducts] = useState([])
     const [search,setSearch] = useState('')
     const [ordered,setOrdered] = useState(false)
+    const [price,setPrice] = useState("")
+    const [orders,setOrders] = useState(() => {
+        const storedOrders = localStorage.getItem("orders")
+        return storedOrders ? JSON.parse(storedOrders) : []
+    })
 
     const value = {
         logged,
@@ -31,7 +36,11 @@ const PageContextProvider = ({children}) => {
         search,
         setSearch,
         ordered,
-        setOrdered
+        setOrdered,
+        price,
+        setPrice,
+        orders,
+        setOrders
     }
 
    return (
