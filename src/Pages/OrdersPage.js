@@ -6,8 +6,6 @@ const OrdersPage = () => {
   const { orders } = usePageContext();
   const { t } = useTranslation()
 
- console.log(orders.map((order) => order.map((item) => console.log(item.name)) ))
-
  useEffect(() => {
     localStorage.setItem("orders", JSON.stringify(orders))
  },[orders])

@@ -6,8 +6,6 @@ const Order = () => {
     const {ordered,setOrdered,cartItems,setCartItems,orders,setOrders} = usePageContext()
     const [totalPrice,setTotalPrice] = useState(0)
 
-    console.log(orders)
-
     useEffect(() => {
         if(ordered && cartItems.length > 0){
             const price = Math.ceil(cartItems.reduce((acc, pr) => acc + pr.price, 0));
