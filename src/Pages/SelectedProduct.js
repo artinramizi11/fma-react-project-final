@@ -15,7 +15,7 @@ const SelectedProduct = () => {
     useEffect(() => {
         fetch(`api/products/${id}.json`).then(res => res.json()).then(data => setProduct(data))
 
-    },[])
+    },[id])
 
     function addToCartBtn() {
       setCartItems(prev => prev.some(p => p.id === product.id) ? prev : [...prev, product])
