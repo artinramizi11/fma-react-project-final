@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fma-react-project-final/static/css/main.adc92afe.css",
-    "main.js": "/fma-react-project-final/static/js/main.347a5c82.js",
+    "main.css": "/fma-react-project-final/static/css/main.b9cb8f49.css",
+    "main.js": "/fma-react-project-final/static/js/main.200362c3.js",
     "static/media/ukflag.jpg": "/fma-react-project-final/static/media/ukflag.331bad6c8d39ae764b40.jpg",
     "static/media/al-flag.png": "/fma-react-project-final/static/media/al-flag.a8f4f1cec5df3be949db.png",
     "index.html": "/fma-react-project-final/index.html",
-    "main.adc92afe.css.map": "/fma-react-project-final/static/css/main.adc92afe.css.map",
-    "main.347a5c82.js.map": "/fma-react-project-final/static/js/main.347a5c82.js.map"
+    "main.b9cb8f49.css.map": "/fma-react-project-final/static/css/main.b9cb8f49.css.map",
+    "main.200362c3.js.map": "/fma-react-project-final/static/js/main.200362c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.adc92afe.css",
-    "static/js/main.347a5c82.js"
+    "static/css/main.b9cb8f49.css",
+    "static/js/main.200362c3.js"
   ]
 }
