@@ -35,7 +35,7 @@ return (
           <h1 className='hover:underline cursor-pointer'>{product.name}</h1>
           <h1>{product.price}$</h1>
          <div className='flex flex-col items-start'>
-         <button className={`text-white text-sm w-[150px] p-1 hover:bg-slate-900 ${productExists ? "bg-green-400" : "bg-slate-700"}`} onClick={addToCartBtn}>{productExists ? t('added-product-text') : t('add-product-to-cart')}</button>
+         <button className={`text-white text-sm p-1 hover:bg-slate-900 ${productExists ? "bg-green-400" : "bg-slate-700"}`} onClick={addToCartBtn}>{productExists ? t('added-product-text') : t('add-product-to-cart')}</button>
          <Link to={`/product/${product.id}`} className='p-1 hover:underline text-sm'>{t('visit-product-text')}</Link>
          </div>
         </div>
