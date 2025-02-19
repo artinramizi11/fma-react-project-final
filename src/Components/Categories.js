@@ -48,7 +48,7 @@ const Categories = ({ param }) => {
         <h1
           className={`text-lg font-semibold cursor-pointer transition-all ${
             !param
-              ? 'text-blue-600 underline'
+              ? 'text-slate-600 underline'
               : 'text-gray-800 hover:underline hover:text-blue-600'
           }`}
           onClick={allProductsText}
