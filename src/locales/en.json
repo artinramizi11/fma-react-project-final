@@ -18,7 +18,8 @@
     "product-status": "Pending",
     "status": "Status",
     "total-price": "Total Price",
-    "product-quantity": "Products Quantity"
+    "product-quantity": "Products Quantity",
+    "next-btn": "Next"
 
 
   }

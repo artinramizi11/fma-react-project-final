@@ -33,7 +33,7 @@ const SelectedProduct = () => {
 
 
   return (
-    <div className="p-6 h-screen flex flex-col items-center justify-center">
+    <div className="p-6 flex flex-col items-center justify-center">
       {product ? 
         <>
 

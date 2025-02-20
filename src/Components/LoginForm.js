@@ -27,7 +27,7 @@ const LoginForm = () => {
   return (
     <>
      {languageChoosed &&  
-      <div className=" flex items-center justify-center bg-slate-300">
+      <div className=" flex items-center justify-center bg-slate-300 h-full">
 
      <div className="bg-white p-8 rounded-2xl shadow-2xl w-96">
         <h1 className="text-3xl font-bold text-slate-700 text-center mb-6">{t('loginFormTitle')}</h1>
@@ -61,7 +61,7 @@ const LoginForm = () => {
         </div>
       </div>
       </div>}
-      {!languageChoosed && <ChooseLanguage setLanguageChoosed={setLanguageChoosed} />}
+      {!languageChoosed && <ChooseLanguage setLanguageChoosed={setLanguageChoosed}/>}
     </>
   );
 };

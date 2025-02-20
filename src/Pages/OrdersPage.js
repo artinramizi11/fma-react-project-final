@@ -11,7 +11,7 @@ const OrdersPage = () => {
  },[orders])
 
   return (
-    <div className="p-6 bg-gray-50 h-screen">
+    <div className="p-6 bg-gray-50 h-full">
       <h1 className="text-3xl font-bold mb-6 text-gray-800">Order History</h1>
       {orders.length === 0 && <p>No Orders</p>}
      {orders.length > 0 &&  <div className=" bg-white p-4 shadow-lg rounded-lg">

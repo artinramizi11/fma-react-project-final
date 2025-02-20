@@ -45,16 +45,8 @@ const Categories = ({ param }) => {
       </div>
 
       <div className="mt-4">
-        <h1
-          className={`text-lg font-semibold cursor-pointer transition-all ${
-            !param
-              ? 'text-slate-600 underline'
-              : 'text-gray-800 hover:underline hover:text-blue-600'
-          }`}
-          onClick={allProductsText}
-        >
-          All Products
-        </h1>
+        <h1 className={`text-lg font-semibold cursor-pointer transition-all ${!param ? 'text-slate-600 underline': 'text-gray-800 hover:underline hover:text-blue-600'}`}
+          onClick={allProductsText}>All Products</h1>
 
         <div className="flex flex-wrap gap-3 mt-3">
           {categories?.map((category) => (

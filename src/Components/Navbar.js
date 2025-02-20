@@ -5,12 +5,17 @@ import i18n from '../i18n';
 import { useTranslation } from 'react-i18next';
 import albanianflag from '../images/al-flag.png';
 import ukflag from '../images/ukflag.jpg';
+import { languages } from '../languagesData';
 
 const Navbar = () => {
-  const [language, setLanguage] = useState('');
 
-  const { t } = useTranslation();
+  const [language, setLanguage] = useState('');
+  const { t , i18n } = useTranslation();
   const { logged, setLogged, cartItems } = usePageContext();
+
+  const currentLanguage = i18n.language;
+
+  const languageSelected = languages.find((language) => language.value === currentLanguage)
 
   useEffect(() => {
     if(logged === false) {
@@ -46,37 +51,10 @@ const Navbar = () => {
         {logged && <Link to='/orders'>{t("order-history")}</Link>}
       </div>
 
-      <div className="flex items-center gap-3">
-      {/* <select className='bg-slate-400' onChange={(e) => {
-        console.log(e.target.value)
-        i18n.changeLanguage(e.target.value)
-        setLanguage(e.target.value)
-      }}> 
-          <option value="en">English</option>
-          <option value="al">Albanian</option>
-          <option value="du">Deutsch</option>
-          <option value="italy">Italian</option>
-          <option value="es">Spanish</option>
-        </select> */}
-
-        
-        {/* <img
-          src={albanianflag}
-          className={`w-8 h-8 cursor-pointer rounded-full border-2 ${language === 'al' ? 'border-white' : 'border-transparent'} hover:opacity-80 transition`}
-          onClick={() => {
-            i18n.changeLanguage('al');
-            setLanguage('al');
-          }}
-        />
-        <img
-          src={ukflag}
-          className={`w-8 h-8 cursor-pointer rounded-full border-2 ${language === 'en' ? 'border-white' : 'border-transparent'} hover:opacity-80 transition`}
-          onClick={() => {
-            i18n.changeLanguage('en');
-             setLanguage('en');
-          }} */}
-        
-      </div>
+      {logged && <div className="flex items-center gap-3">
+        <p>Selected Language</p>
+        <img src={languageSelected.image} width={50} height={100} />
+      </div>}
     </nav>
   );
 };

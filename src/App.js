@@ -23,7 +23,7 @@ const App = () => {
   },[])
 
   return (
-<div className="h-screen grid grid-rows-[auto_1fr_auto]">
+<div className='h-screen flex flex-col'>
 <Navbar />
      {logged &&  
     <>

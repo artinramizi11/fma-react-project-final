@@ -30,7 +30,7 @@ const CartItemPage = () => {
 
 
   return (
-    <div className="flex flex-col gap-4 p-4 md:p-6 bg-slate-100 min-h-screen">
+    <div className="gap-4 p-4 md:p-6 bg-slate-100 h-full">
     {cartItems.length === 0 && (
       <div className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center justify-center h-[500px]">
         <h1 className="text-2xl font-semibold text-gray-700">{t("no-products-in-cart")}</h1>
@@ -41,7 +41,7 @@ const CartItemPage = () => {
     )}
   
     {cartItems.length > 0 && (
-      <div className="h-[600px] overflow-y-auto bg-white shadow-lg rounded-lg p-4 flex flex-col gap-2">
+      <div className=" overflow-y-auto bg-white shadow-lg rounded-lg p-4 flex flex-col gap-2">
         {cartItems.map((product) => (
           <div key={product.id} className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-gray-100 rounded-lg shadow-sm border border-gray-300">
             <img src={`api/images/${product.imageUrl}`} className="w-[100px] h-[100px] object-cover rounded-md" />
