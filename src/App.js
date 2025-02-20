@@ -23,8 +23,8 @@ const App = () => {
   },[])
 
   return (
-    <div>
-      <Navbar />
+<div className="h-screen grid grid-rows-[auto_1fr_auto]">
+<Navbar />
      {logged &&  
     <>
      <Routes>

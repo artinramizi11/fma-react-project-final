@@ -47,7 +47,20 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-3">
-        <img
+      {/* <select className='bg-slate-400' onChange={(e) => {
+        console.log(e.target.value)
+        i18n.changeLanguage(e.target.value)
+        setLanguage(e.target.value)
+      }}> 
+          <option value="en">English</option>
+          <option value="al">Albanian</option>
+          <option value="du">Deutsch</option>
+          <option value="italy">Italian</option>
+          <option value="es">Spanish</option>
+        </select> */}
+
+        
+        {/* <img
           src={albanianflag}
           className={`w-8 h-8 cursor-pointer rounded-full border-2 ${language === 'al' ? 'border-white' : 'border-transparent'} hover:opacity-80 transition`}
           onClick={() => {
@@ -61,8 +74,8 @@ const Navbar = () => {
           onClick={() => {
             i18n.changeLanguage('en');
              setLanguage('en');
-          }}
-        />
+          }} */}
+        
       </div>
     </nav>
   );

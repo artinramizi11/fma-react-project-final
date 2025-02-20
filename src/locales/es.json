@@ -1,0 +1,22 @@
+{
+    "loginFormTitle": "Necesitas iniciar sesión primero",
+    "footer": "Todos los derechos reservados por Artin Ramizi",
+    "home-nav-text": "Inicio",
+    "home-login-text": "Iniciar sesión",
+    "home-cart-text": "Artículos en el carrito",
+    "home-logout-text": "Cerrar sesión",
+    "fields-required": "Ambos campos son obligatorios",
+    "username-placeholder": "nombre de usuario",
+    "password-placeholder": "contraseña",
+    "submit-btn": "Enviar",
+    "visit-product-text": "Visitar este producto",
+    "add-product-to-cart": "Añadir al carrito",
+    "added-product-text": "Añadido al carrito",
+    "no-products-in-cart": "No hay productos en el carrito",
+    "go-to-products": "Ir a los productos",
+    "order-history": "Pedidos",
+    "product-status": "Pendiente",
+    "status": "Estado",
+    "total-price": "Precio total",
+    "product-quantity": "Cantidad de productos"
+}

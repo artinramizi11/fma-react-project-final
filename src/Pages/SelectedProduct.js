@@ -36,20 +36,17 @@ const SelectedProduct = () => {
     <div className="p-6 h-screen flex flex-col items-center justify-center">
       {product ? 
         <>
-          <h1 className="text-center text-3xl font-bold mt-6 text-gray-800">
-            You have selected <span className="bg-slate-700 p-2 text-white">{product?.name}</span>
-          </h1>
-  
+
           <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mt-8 p-6 bg-white shadow-lg rounded-lg">
             <img
               src={`api/images/${product?.imageUrl}`}
-              className="w-[400px] h-[400px] "
+              className="w-[400px] h-[400px]"
             />
   
             <div className="flex flex-col gap-4 text-gray-800">
               <h1 className="text-3xl font-semibold">{product?.name}</h1>
               <p className="text-lg text-gray-600">{product?.description}</p>
-              <h1 className="text-2xl font-bold text-green-600">${product?.price}</h1>
+              <h1 className="text-2xl font-bold text-slate-400">${product?.price}</h1>
               
               <button 
                 className="bg-slate-700 text-white px-6 py-3 rounded-lg text-lg font-semibold 

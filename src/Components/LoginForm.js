@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { usePageContext } from '../context/PageContext';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ChooseLanguage from './ChooseLanguage';
 
 const LoginForm = () => {
   const { t } = useTranslation();
@@ -10,6 +11,8 @@ const LoginForm = () => {
   const [errorText, setErrorText] = useState('');
   const { setLogged } = usePageContext();
   const navigate = useNavigate();
+
+  const [languageChoosed,setLanguageChoosed] = useState(false)
 
   function loginBtn() {
     if (!userForm.username || !userForm.password) {
@@ -22,8 +25,11 @@ const LoginForm = () => {
   }
 
   return (
-    <div className="h-screen flex items-center justify-center bg-slate-300">
-      <div className="bg-white p-8 rounded-2xl shadow-2xl w-96">
+    <>
+     {languageChoosed &&  
+      <div className=" flex items-center justify-center bg-slate-300">
+
+     <div className="bg-white p-8 rounded-2xl shadow-2xl w-96">
         <h1 className="text-3xl font-bold text-slate-700 text-center mb-6">{t('loginFormTitle')}</h1>
 
         <div className="space-y-5">
@@ -54,7 +60,9 @@ const LoginForm = () => {
           {errorText && <p className="text-red-600 text-center mt-2">{errorText}</p>}
         </div>
       </div>
-    </div>
+      </div>}
+      {!languageChoosed && <ChooseLanguage setLanguageChoosed={setLanguageChoosed} />}
+    </>
   );
 };
 
