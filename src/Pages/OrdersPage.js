@@ -11,7 +11,7 @@ const OrdersPage = () => {
  },[orders])
 
   return (
-    <div className="p-6 bg-gray-50 h-full">
+    <div className="p-6 bg-gray-50 h-full overflow-y-auto">
       <h1 className="text-3xl font-bold mb-6 text-gray-800">Order History</h1>
       {orders.length === 0 && <p>No Orders</p>}
      {orders.length > 0 &&  <div className=" bg-white p-4 shadow-lg rounded-lg">
@@ -26,11 +26,12 @@ const OrdersPage = () => {
           </thead>
           <tbody>
             {orders?.map((orderList,index) => {
+              console.log(orderList.items)
                 return (
                     <tr key={index} className="border-b hover:bg-gray-100">
                         <td className="p-4 text-gray-800">#{index + 1}</td>
-                        <td className="p-4 text-gray-800">{orderList.length}</td>
-                        <td className="p-4 text-gray-800 font-semibold">${Math.ceil(orderList.reduce((acc, pr) => acc + pr.price, 0))}</td>
+                        <td className="p-4 text-gray-800">{orderList?.length}</td>
+                        <td className="p-4 text-gray-800 font-semibold">${Math.ceil(orderList?.reduce((acc, order) => acc + order.price, 0))}</td>
                         <td className="p-4 text-yellow-600 font-semibold">{t("product-status")}</td>
                     </tr>
                 )

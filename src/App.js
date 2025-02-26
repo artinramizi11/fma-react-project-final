@@ -23,7 +23,7 @@ const App = () => {
   },[])
 
   return (
-<div className='h-screen flex flex-col'>
+<div className='flex flex-col h-screen'>
 <Navbar />
      {logged &&  
     <>

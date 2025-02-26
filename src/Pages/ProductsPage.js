@@ -37,7 +37,7 @@ const ProductsPage = () => {
 
 
     return (
-      <>
+      <div className='p-2'>
         <Categories />
         <ProductsPagination productsPagination={productsPagination}  />
     
@@ -57,7 +57,7 @@ const ProductsPage = () => {
             </Link>
           ))}
         </div>
-      </>
+      </div>
     );
     
 }

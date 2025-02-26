@@ -20,7 +20,7 @@ const Categories = ({ param }) => {
   }
 
   return (
-    <div className="flex  flex-col p-2">
+    <div className="flex  flex-col p-2 gap-4">
       
       <div className="flex items-center justify-between p-3 gap-3 border-b border-gray-300 pb-3">
        <div className='flex gap-2 items-center'>
