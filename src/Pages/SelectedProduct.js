@@ -33,14 +33,14 @@ const SelectedProduct = () => {
 
 
   return (
-    <div className="p-6 flex flex-col items-center justify-center h-full">
+    <div className="p-6 flex flex-col items-center h-screen">
       {product ? 
         <>
 
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mt-8 p-6 bg-white">
+          <div className="grid grid-cols-[auto_1fr] max-sm:grid-cols-1 items-center justify-center gap-12 mt-8 p-6 bg-white">
             <img
               src={`api/images/${product?.imageUrl}`}
-              className="w-[400px] h-[400px]"
+              className="object-cover w-[500px]"
             />
   
             <div className="flex flex-col gap-4 text-gray-800">

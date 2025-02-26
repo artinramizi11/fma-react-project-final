@@ -25,7 +25,7 @@ const Navbar = () => {
   },[logged])
 
   return (
-    <nav className="bg-slate-700 p-5 text-white font-bold flex items-center justify-between shadow-md">
+    <nav className="bg-slate-700 p-5 text-white font-bold flex items-center justify-between max-lg:flex-col max-lg:gap-4 shadow-md">
       <Link to="/" className="text-xl md:text-2xl font-bold tracking-wide hover:text-gray-300 transition">
         Artini's Store
       </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
 
       {logged && <div className="flex items-center gap-3">
         <p>Selected Language</p>
-        <img src={languageSelected.image} width={50} height={100} />
+        <img src={languageSelected?.image} width={50} height={100} />
       </div>}
     </nav>
   );

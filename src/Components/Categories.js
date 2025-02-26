@@ -22,8 +22,8 @@ const Categories = ({ param }) => {
   return (
     <div className="flex  flex-col p-2 gap-4">
       
-      <div className="flex items-center justify-between p-3 gap-3 border-b border-gray-300 pb-3">
-       <div className='flex gap-2 items-center'>
+      <div className="flex items-center justify-between p-3 gap-3 border-b border-gray-300 pb-3 max-lg:flex max-lg:flex-col max-lg:items-start">
+       <div className='grid grid-cols-[auto_1fr] gap-2 items-center'>
        <p className="text-gray-700 font-medium">Search:</p>
         <input
           type="text"
@@ -33,14 +33,15 @@ const Categories = ({ param }) => {
           value={search}
         />
        </div>
-       <div className="flex items-center gap-3">
+  <div className='grid grid-cols-[auto_1fr] gap-2 items-center'>
+    <p>Search by price:</p>
   <input
     type="number"
     placeholder="Enter Price"
     className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 "
     onChange={(e) => setPrice(e.target.value)} value={price}
   />
-</div>
+  </div>
 
       </div>
 

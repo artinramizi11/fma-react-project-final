@@ -21,9 +21,9 @@ useEffect(() => {
 return (
     <div className='flex items-center gap-2 justify-center' >
        {product &&
-       <div onClick={() => navigate(`/product/${product.id}`)} className='flex flex-col items-center gap-2'>
-       <img src={`api/images/${product.imageUrl}`} className='w-[200px] h-[200px]' />
-        <div>
+       <div onClick={() => navigate(`/product/${product.id}`)} className='grid grid-rows-[auto_1fr]'>
+       <img src={`api/images/${product.imageUrl}`} className='object-contain object-cover w=[250px] h-[250px]' />
+        <div className='flex flex-col items-center gap=2'>
           <h1 className='hover:underline cursor-pointer'>{product.name}</h1>
           <h1>{product.price}$</h1>
          <div className='flex flex-col items-start'>
