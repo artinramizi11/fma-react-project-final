@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { usePageContext } from '../context/PageContext'
 
+
 const SelectedProduct = () => {
 
     const {id} = useParams()
 
-    const [product,setProduct] = useState(null)
+    const [product, setProduct] = useState(undefined);
     const {cartItems,setCartItems} = usePageContext()
 
     const productExists = cartItems?.some((p) => p.id === product?.id)

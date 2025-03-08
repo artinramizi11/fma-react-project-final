@@ -4,7 +4,7 @@ import { usePageContext } from '../context/PageContext';
 
 const Categories = ({ param }) => {
   const [categories, setCategories] = useState([]);
-  const { setSelectedCategory, setSearch, search,price,setPrice } = usePageContext();
+  const { setSelectedCategory, setSearch, search } = usePageContext();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,15 +33,7 @@ const Categories = ({ param }) => {
           value={search}
         />
        </div>
-  <div className='grid grid-cols-[auto_1fr] gap-2 items-center'>
-    <p>Search by price:</p>
-  <input
-    type="number"
-    placeholder="Enter Price"
-    className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400 "
-    onChange={(e) => setPrice(e.target.value)} value={price}
-  />
-  </div>
+  
 
       </div>
 

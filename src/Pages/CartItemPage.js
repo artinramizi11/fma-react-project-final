@@ -31,17 +31,17 @@ const CartItemPage = () => {
 
   return (
     <div className="gap-4 p-4 md:p-6 bg-slate-100 h-full overflow-y-auto">
-    {cartItems.length === 0 && (
+    {cartItems.length === 0 && 
       <div className="bg-white p-6 text-center flex flex-col items-center justify-center h-[500px]">
         <h1 className="text-2xl font-semibold text-gray-700">{t("no-products-in-cart")}</h1>
         <Link to="/" className="mt-3 text-slate-800 hover:underline text-lg underline">
           {t("go-to-products")}
         </Link>
       </div>
-    )}
+  }
   
-    {cartItems.length > 0 && (
-      <div className="overflow-y-auto bg-red-400 shadow-lg rounded-lg p-4 flex flex-col gap-3">
+    {cartItems.length > 0 && 
+      <div className="overflow-y-auto bg-slate-100 shadow-lg rounded-lg p-4 flex flex-col gap-3">
         {cartItems.map((product) => (
           <div key={product.id} className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-gray-100 rounded-lg shadow-sm border border-gray-300 ">
             <img src={`api/images/${product.imageUrl}`} className="w-[100px] h-[100px] object-cover rounded-md" />
@@ -56,10 +56,10 @@ const CartItemPage = () => {
           </div>
         ))}
       </div>
-    )}
+    }
   
-    {cartItems.length > 0 && (
-      <div className="flex flex-col md:flex-row justify-between items-center p-4 bg-white shadow-md rounded-lg">
+    {cartItems.length > 0 && 
+      <div className="flex flex-col md:flex-row justify-between items-center p-4 bg-white shadow-md rounded-lg mt-4">
         <h1 className="text-xl font-semibold text-gray-800">Total Price: {totalPrice}$</h1>
         <button
           className="bg-slate-500 hover:bg-slate-600 text-white font-bold px-6 py-3 rounded-lg shadow-md transition"
@@ -68,7 +68,7 @@ const CartItemPage = () => {
           Checkout
         </button>
       </div>
-    )}
+    }
   </div>
   
   )

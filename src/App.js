@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Products from './Pages/ProductsPage'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import SelectedProduct from './Pages/SelectedProduct'
@@ -21,6 +20,7 @@ const App = () => {
     fetch("api/products.json").then(res => res.json()).then(data => setProducts(data))
     fetch("api/categories.json").then(res => res.json()).then(data => setCategories(data))
   },[])
+
 
   return (
 <div className='flex flex-col h-screen'>

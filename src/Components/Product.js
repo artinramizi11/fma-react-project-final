@@ -7,10 +7,8 @@ const Product = ({product}) => {
 
   const { t } = useTranslation()
 
-  const {cartItems,setCartItems} = usePageContext()
+  const {cartItems} = usePageContext()
   const navigate = useNavigate()
-
-  const productExists = cartItems?.some((p) => p.id === product?.id)
 
 
 useEffect(() => {
