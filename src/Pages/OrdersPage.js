@@ -25,13 +25,13 @@ const OrdersPage = () => {
             </tr>
           </thead>
           <tbody>
-            {orders?.map((orderList,index) => {
-              console.log(orderList.items)
+            {orders.length > 0 && orders.map((orderList,index) => {
+              console.log(orderList?.items)
                 return (
                     <tr key={index} className="border-b hover:bg-gray-100">
                         <td className="p-4 text-gray-800">#{index + 1}</td>
                         <td className="p-4 text-gray-800">{orderList?.length}</td>
-                        <td className="p-4 text-gray-800 font-semibold">${Math.ceil(orderList?.reduce((acc, order) => acc + order.price, 0))}</td>
+                        {orderList.length > 0 && <td className="p-4 text-gray-800 font-semibold">${Math.ceil(orderList?.reduce((acc, order) => acc + order.price, 0))}</td>}
                         <td className="p-4 text-yellow-600 font-semibold">{t("product-status")}</td>
                     </tr>
                 )

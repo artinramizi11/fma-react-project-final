@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import Categories from '../Components/Categories'
 import { usePageContext } from '../context/PageContext'
-import { useParams } from 'react-router-dom'
+import { useParams, useSearchParams } from 'react-router-dom'
 import Product from '../Components/Product'
 import CategoryPagination from '../Components/CategoryPagination'
 
@@ -10,7 +10,6 @@ const ProductsByCategory = () => {
     const {categoryName} = useParams()
 
     const {categories,products,search,selectedCategory,price} = usePageContext()
-
 
     const filteredProductsByCategory = useMemo(() => {
         const selectedCategory = categories?.find((category) => category.name.toLowerCase() === categoryName.toLowerCase())

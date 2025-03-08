@@ -16,7 +16,7 @@ const ProductsPage = () => {
 
     return products?.slice((currentPage - 1) * pageSize, currentPage * pageSize).filter((product) => {
       const searchByPrice = price ? product.price >= price : true
-      const searchByName = product.name.toLowerCase().includes(search.toLowerCase())
+      const searchByName = product.name.toLowerCase().includes(search)
       return searchByName && searchByPrice
     })
 

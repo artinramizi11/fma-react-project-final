@@ -32,7 +32,7 @@ const CartItemPage = () => {
   return (
     <div className="gap-4 p-4 md:p-6 bg-slate-100 h-full overflow-y-auto">
     {cartItems.length === 0 && 
-      <div className="bg-white p-6 text-center flex flex-col items-center justify-center h-[500px]">
+      <div className="bg-white p-6 text-center flex flex-col items-center justify-center h-full">
         <h1 className="text-2xl font-semibold text-gray-700">{t("no-products-in-cart")}</h1>
         <Link to="/" className="mt-3 text-slate-800 hover:underline text-lg underline">
           {t("go-to-products")}

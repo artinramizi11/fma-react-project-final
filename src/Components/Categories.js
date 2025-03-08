@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams, useResolvedPath, useSearchParams } from 'react-router-dom';
 import { usePageContext } from '../context/PageContext';
 
 const Categories = ({ param }) => {
@@ -7,12 +7,18 @@ const Categories = ({ param }) => {
   const { setSelectedCategory, setSearch, search } = usePageContext();
   const navigate = useNavigate();
 
+  const [searchParams,setSearchParams] = useSearchParams()
+  const pathname = useResolvedPath()
+
   useEffect(() => {
     fetch('api/categories.json')
     .then((res) => res.json())
     .then((data) => setCategories(data));
+    setSearch(searchParams.get("search") || "")
 
   }, []);
+
+
 
   function allProductsText() {
     setSelectedCategory('');
@@ -29,7 +35,11 @@ const Categories = ({ param }) => {
           type="text"
           placeholder="Search products..."
           className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+            setSearch(e.target.value)
+            navigate(`${pathname.pathname}?search=${e.target.value}`)
+
+          }}
           value={search}
         />
        </div>

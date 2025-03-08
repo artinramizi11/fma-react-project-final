@@ -2,6 +2,8 @@ import Product from "./Product";
 
 function ProductsPagination({productsPagination}){
     const {paginationProducts,currentPage,price,search} = productsPagination;
+
+    console.log(paginationProducts)
   
     return (
     <>
