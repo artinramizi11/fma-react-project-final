@@ -2,86 +2,106 @@
     {
         "id": 1,
         "name": "Electronics",
-        "parent": null
+        "parent": null,
+        "icon_name": "fa-laptop-medical"
     },
     {
         "id": 2,
         "name": "Laptops",
-        "parent": 1
+        "parent": 1,
+        "icon_name": "fa-laptop"
     },
     {
         "id": 3,
         "name": "Smartphones",
-        "parent": 1
+        "parent": 1,
+        "icon_name": "fa-mobile-screen"
     },
     {
         "id": 4,
         "name": "Cameras",
-        "parent": 1
+        "parent": 1,
+        "icon_name":"fa-camera-retro"
     },
     {
         "id": 5,
         "name": "Digital Cameras",
-        "parent": 4
+        "parent": 4,
+        "icon_name":"fa-camera-retro"
+
     },
     {
         "id": 6,
         "name": "DSLR Cameras",
-        "parent": 4
+        "parent": 4,
+        "icon_name":"fa-camera-retro"
+
     },
     {
         "id": 7,
         "name": "Point and Shoot Cameras",
-        "parent": 4
+        "parent": 4,
+        "icon_name":"fa-camera-retro"
+
     },
     {
         "id": 8,
         "name": "Clothing",
-        "parent": null
+        "parent": null,
+        "icon_name": "fa-shirt"
     },
     {
         "id": 9,
         "name": "Mens Clothing",
-        "parent": 8
+        "parent": 8,
+        "icon_name": "fa-person"
     },
     {
         "id": 10,
         "name": "Womens Clothing",
-        "parent": 8
+        "parent": 8,
+        "icon_name": "fa-person-dress"
     },
     {
         "id": 11,
         "name": "Shoes",
-        "parent": 8
+        "parent": 8,
+        "icon_name": "fa-shoe-prints"
     },
     {
         "id": 12,
         "name": "Accessories",
-        "parent": null
+        "parent": null,
+        "icon_name": "fa-glasses"
     },
     {
         "id": 13,
         "name": "Jewelry",
-        "parent": 12
+        "parent": 12,
+        "icon_name": "fa-gem"
     },
     {
         "id": 14,
         "name": "Watches",
-        "parent": 12
+        "parent": 12,
+        "icon_name": "fa-clock"
     },
     {
         "id": 15,
         "name": "Bags and Luggage",
-        "parent": 12
+        "parent": 12,
+        "icon_name": "fa-bag-shopping"
     },
     {
         "id": 16,
         "name": "Headphones",
-        "parent": 1
+        "parent": 1,
+        "icon_name": "fa-headphones"
     },
     {
         "id": 17,
         "name": "Bikes",
-        "parent": null
+        "parent": null,
+        "icon_name": "fa-person-biking"
     }
 ]
