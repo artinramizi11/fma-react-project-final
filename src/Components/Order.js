@@ -8,9 +8,9 @@ const Order = () => {
 
     useEffect(() => {
         if(ordered && cartItems.length > 0){
-            const price = Math.ceil(cartItems.reduce((acc, pr) => acc + pr.price, 0));
-            setTotalPrice(price)
-            setOrders([...orders, cartItems])
+          const price = Math.ceil(cartItems?.reduce((acc, product) => acc + (product.quantity * product.price), 0));
+          setTotalPrice(price)
+            setOrders([...orders, {cartItems, date: new Date().toLocaleDateString()}])
             setCartItems([])
         } else return;
 

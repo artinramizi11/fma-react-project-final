@@ -49,13 +49,16 @@ const SelectedProduct = () => {
               <p className="text-lg text-gray-600">{product?.description}</p>
               <h1 className="text-2xl font-bold text-slate-400">${product?.price}</h1>
               
-              <button 
+          
+              {productExists && <button className='bg-green-400 text-white px-6 py-3 rounded-lg text-lg font-semibold 
+                '>Added to the cart</button>}
+              {!productExists && <button 
                 className="bg-slate-700 text-white px-6 py-3 rounded-lg text-lg font-semibold 
                 hover:bg-slate-800 transition-all duration-300 shadow-md"
                 onClick={addToCartBtn}
               >
-                {productExists ? "Added to the Cart" : "Add to Cart"}
-              </button>
+                Add to cart
+              </button> }
             </div>
           </div>
         </>

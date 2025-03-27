@@ -57,14 +57,16 @@ const Categories = ({ param }) => {
               key={category.name}
               to={`/category/${category.name}/`}
               onClick={() => setSelectedCategory(category.name)}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all border border-gray-300 shadow-sm 
+              className={`px-4 flex gap-4 items-center py-2 rounded-md text-sm font-medium transition-all border border-gray-300 shadow-sm 
                 ${
                   param === category.name
                     ? 'bg-slate-700 text-white shadow-md'
                     : 'bg-gray-100 text-gray-800 hover:bg-slate-700 hover:text-white hover:shadow-md'
                 }`}
             >
-              {category.name}
+             
+              {<i class={`fa-solid ${category.icon_name}`}></i>}
+              <p>{category.name}</p>
             </Link>
           ))}
         </div>
